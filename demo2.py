@@ -7,8 +7,6 @@ me.connect(wait_for_state=True)
 me.streamon()
 me.set_video_fps(me.FPS_30)
 
-
-
 def uptadeValues():
     flightTime = f'{me.get_flight_time()} Seconds flying.'
     altitude = f'{me.get_height()} Cm high'
@@ -19,7 +17,6 @@ def uptadeValues():
     cv.putText(img,altitude,(15,15*4),fontFace=cv.FONT_HERSHEY_DUPLEX,fontScale=.7,color=(125, 246, 55),thickness=1)
     cv.putText(img,charge,(15,15*6),fontFace=cv.FONT_HERSHEY_DUPLEX,fontScale=.7,color=(125, 246, 55),thickness=1)
     cv.putText(img,temp,(15,15*8),fontFace=cv.FONT_HERSHEY_DUPLEX,fontScale=.7,color=(125, 246, 55),thickness=1)
-
 
 while True:
     img = me.get_frame_read(with_queue=False, max_queue_len=32).frame
