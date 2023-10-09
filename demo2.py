@@ -6,6 +6,8 @@ me = Tello()
 me.connect(wait_for_state=True)
 me.streamon()
 me.set_video_fps(me.FPS_30)
+me.set_video_bitrate(Tello.BITRATE_AUTO)
+me.set_video_resolution(Tello.RESOLUTION_720P)
 
 def uptadeValues():
     flightTime = f'{me.get_flight_time()} Seconds flying.'
