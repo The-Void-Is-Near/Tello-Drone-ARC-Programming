@@ -13,4 +13,9 @@ while True:
     image=cv.resize(image, (200,350))
     cv.imshow("",image)
     
-    if cv.waitKey(0) & 
+    
+    if cv.waitKey(0) & 0xFF == ord('q'):
+        break
+cv.destroyAllWindows()
+me.streamoff()
+exit()
