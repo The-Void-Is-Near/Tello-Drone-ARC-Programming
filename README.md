@@ -1,4 +1,4 @@
-#Public-Tello-Drone-ARC
+Public-Tello-Drone-ARC
 By Jason Sawiris
 
 DroneData.py: Displays window populated with footage and drone data.
