@@ -1,7 +1,3 @@
-'''
-See Spin.py to get more help with Tello functions.
-'''
-
 from djitellopy import Tello
 from time import sleep
 import cv2 as cv
@@ -20,6 +16,7 @@ def uptadeValues(img):
     altitude = f'{me.get_height()} Cm high'
     charge = f'{me.get_battery()} % Charge'
     temp = f'{round(me.get_temperature(),2)}C / {round((9/5)*me.get_temperature()+32,2)}F'
+    
     #Edit the image (that will be displayed) with overlaid text of the data (ft,alt,battCharge,temp)
     cv.putText(img,flightTime,(15,15*2),fontFace=cv.FONT_HERSHEY_DUPLEX,fontScale=.7,color=(125, 246, 55),thickness=1)
     cv.putText(img,altitude,(15,15*4),fontFace=cv.FONT_HERSHEY_DUPLEX,fontScale=.7,color=(125, 246, 55),thickness=1)
